@@ -6,11 +6,11 @@ return {
       auto_install = true,
       highlight = {
         enable = true,
-        disable = { "pug" }, -- List of languages to disable Treesitter highlighting for
+        disable = { "pug" }, 
       },
       indent = {
         enable = true,
-        disable = { "pug" }, -- List of languages to disable Treesitter highlighting for
+        disable = { "pug" },
       },
     })
   end,

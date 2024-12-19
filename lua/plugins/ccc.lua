@@ -10,7 +10,7 @@ return {
           save_on_quit = true,
         },
       })
-      vim.keymap.set("n", "<leader>C", ":CccPick<CR>", {})
+      vim.keymap.set("n", "<leader>c", ":CccPick<CR>", {})
     end,
   },
 }
