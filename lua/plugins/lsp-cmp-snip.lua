@@ -57,10 +57,10 @@ return {
     cmd = { 'LspInfo', 'LspInstall', 'LspStart' },
     event = { 'BufReadPre', 'BufNewFile' },
     dependencies = {
-      { 'hrsh7th/cmp-nvim-lsp' },
-      { 'williamboman/mason.nvim' },
-      { 'williamboman/mason-lspconfig.nvim' },
-      { 'jose-elias-alvarez/nvim-lsp-ts-utils' },
+      'hrsh7th/cmp-nvim-lsp',
+      'williamboman/mason.nvim',
+      'williamboman/mason-lspconfig.nvim',
+      'jose-elias-alvarez/nvim-lsp-ts-utils',
     },
     config = function()
       local lsp_defaults = require('lspconfig').util.default_config
@@ -85,16 +85,6 @@ return {
           vim.keymap.set('n', '<F4>', '<cmd>lua vim.lsp.buf.code_action()<cr>', opts)
         end,
       })
-      vim.diagnostic.config({
-        signs = {
-          text = {
-            [vim.diagnostic.severity.ERROR] = " E",
-            [vim.diagnostic.severity.WARN] = " W",
-            [vim.diagnostic.severity.HINT] = " H",
-            [vim.diagnostic.severity.INFO] = " I",
-          }
-        }
-      })
       require('mason-lspconfig').setup({
         ensure_installed = {
           "ts_ls",
@@ -111,6 +101,19 @@ return {
                 })
                 require("nvim-lsp-ts-utils").setup_client(client)
               end,
+            })
+          end,
+          html = function()
+            require('lspconfig').html.setup({
+              settings = {
+                html = {
+                  format = {
+                    wrapAttributes = "force-aligned",
+                    indentInnerHtml = true,
+                    maxPreserveNewLines = true,
+                  }
+                }
+              }
             })
           end
         }

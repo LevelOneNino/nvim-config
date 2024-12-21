@@ -18,5 +18,5 @@ vim.g.mapleader = " "
 
 require("lazy").setup("plugins")
 require("vim-options")
-require("folds")
 require("statusline")
+require("folds")

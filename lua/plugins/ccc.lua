@@ -9,6 +9,11 @@ return {
           preserve= true,
           save_on_quit = true,
         },
+        win_opts = {
+          row = 0,
+          col = 0,
+          border = "single"
+        }
       })
       vim.keymap.set("n", "<leader>c", ":CccPick<CR>", {})
     end,

@@ -1,4 +1,4 @@
-return{
+return {
   'nvim-telescope/telescope-file-browser.nvim',
   dependencies = {
     'nvim-telescope/telescope.nvim',
@@ -8,12 +8,17 @@ return{
   config = function()
     require("telescope").setup({
       defaults = {
+        layout_strategy = 'vertical',
+        layout_config = {
+          mirror = true,
+          width = 0.9,
+        },
         file_ignore_patterns = { "node_modules", "assets" },
         sorting_strategy = "ascending",
         borderchars = {
-          prompt = { "─", "│", "─", "│", "├", "┤", "┴", "└" },
-          results = { "─", "│", " ", "│", "┌", "┬", "│", "│" },
-          preview = { "─", "│", "─", " ", "─", "┐", "┘", "─" },
+          prompt = { "─", "│", "─", "│", "├", "┤", "┘", "└" },
+          results = { "─", "│", " ", "│", "┌", "┐", "│", "│" },
+          preview = { "─", "│", "─", "│", "┌", "┐", "┘", "└" },
         },
       },
       extensions = {

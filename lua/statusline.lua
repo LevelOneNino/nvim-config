@@ -26,19 +26,26 @@ function _G.Hints()
   return diagnostic
 end
 
-local statusline ={
-  "   ",
+
+-- TODO: git status hl
+-- function _G.GitStatus()
+--   local new_status =""
+--   local status = 
+-- end
+
+local statusline = {
+  "  ",
   "%m ",
   "%f ",
-  "%l:%v  ",
-  "%#DiagnosticError#%{v:lua.Errors()} ",
-  "%#DiagnosticWarning#%{v:lua.Warnings()} ",
-  "%#DiagnosticHint#%{v:lua.Hints()} ",
+  "%#LineNr#%l:%v ",
+  "%#DiagnosticSignError#%{v:lua.Errors()} ",
+  "%#DiagnosticSignWarning#%{v:lua.Warnings()} ",
+  "%#DiagnosticSignHint#%{v:lua.Hints()} ",
   "%*%=",
   "%{get(b:,'gitsigns_status','')} ",
-  "%y ",
-  "%{get(b:,'gitsigns_head','')} ",
-  "   "
+  "%#LineNr# %{get(b:,'gitsigns_head','')} ",
+  "%*%y",
+  "  "
 }
 
 vim.opt.statusline = table.concat(statusline, '')
