@@ -15,7 +15,7 @@ return {
           border = "single"
         }
       })
-      vim.keymap.set("n", "<leader>c", ":CccPick<CR>", {})
+      vim.keymap.set("n", "<leader>c", "<cmd>CccPick<CR>", {})
     end,
   },
 }

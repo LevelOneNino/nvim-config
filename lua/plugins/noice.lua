@@ -13,10 +13,29 @@ return {
           ["vim.lsp.util.stylize_markdown"] = true,
           ["cmp.entry.get_documentation"] = true,
         },
+        hover = {
+          enabled = true,
+          opts = {
+            size = {
+              width = 60,
+            }
+          }
+        },
+        documentation = {
+          view = "hover",
+          opts = {
+            size = {
+              width = 60,
+            },
+          },
+        },
       },
       messages = {
         enabled = false,
         view_history = "messages",
+      },
+      popmenu = {
+        backend = "cmp"
       },
       presets = {
         command_palette = true,
@@ -25,6 +44,9 @@ return {
         lsp_doc_border = false,
       },
       views = {
+        notify = {
+          replace = true
+        },
         cmdline_popup = {
           border = {
             style = "single"

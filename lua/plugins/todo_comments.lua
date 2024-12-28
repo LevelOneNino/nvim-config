@@ -5,6 +5,6 @@ return {
     signs = false
   },
   init = function ()
-    vim.keymap.set("n", "<leader>t", ":TodoTelescope<CR>")
+    vim.keymap.set("n", "<leader>t", "<cmd>TodoTelescope<CR>")
   end
 }

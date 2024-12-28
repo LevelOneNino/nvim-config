@@ -44,6 +44,7 @@ hi! link NoiceCmdlineIconSearch DiagnosticWarn
 hi! link NoiceCmdlinePopupBorderHelp DiagnosticHint
 hi! link NoiceCmdlineIconHelp DiagnosticHint
 hi! link @tag.attribute.html Type
+hi! link RenderMarkdownBullet DiffChange
 
 hi Normal guifg=#d5d5ff guibg=#131720 gui=NONE cterm=NONE
 
@@ -113,7 +114,7 @@ hi TabLineSel guifg=#9090a0 guibg=#22222f gui=NONE cterm=NONE
 hi TabLineFill guifg=NONE guibg=#101319 gui=NONE cterm=NONE
 
 hi StatusLineNC guifg=#454040 guibg=#101319 gui=NONE cterm=NONE
-hi StatusLine guifg=#f0b020 guibg=#101319 gui=NONE cterm=NONE
+hi StatusLine guifg=#9090a0 guibg=#101319 gui=NONE cterm=NONE
 
 hi VertSplit guifg=#22222f guibg=#22222f gui=NONE cterm=NONE
 

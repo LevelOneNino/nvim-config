@@ -11,13 +11,13 @@ vim.cmd("set expandtab")
 vim.cmd("set tabstop=2")
 vim.cmd("set softtabstop=2")
 vim.cmd("set shiftwidth=2")
-vim.cmd("set colorcolumn=110,220,330,440,550")
+vim.cmd("set colorcolumn=111,222,333,444,555")
 vim.cmd("set wrap nowrap")
 vim.opt.lbr = true
 
 vim.cmd("set signcolumn=yes")
 
-vim.opt.fillchars = [[eob: ]]
+vim.opt.fillchars = [[eob: ,lastline: ]]
 
 vim.cmd("set scrolloff=999")
 

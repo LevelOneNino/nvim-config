@@ -1,51 +1,63 @@
-local levels = vim.diagnostic.severity
-function _G.Errors()
+local severity = vim.diagnostic.severity
+function _G.Diagnostics()
   local diagnostic = ''
-  local errors = #vim.diagnostic.get(0, { severity = levels.ERROR })
+  local errors = #vim.diagnostic.get(0, { severity = severity.ERROR })
   if errors > 0 then
-    diagnostic = diagnostic .. 'E' .. errors
+    diagnostic = diagnostic .. ' %#DiagnosticSignError#E' .. errors
   end
-  return diagnostic
-end
-
-function _G.Warnings()
-  local diagnostic = ''
-  local warnings = #vim.diagnostic.get(0, { severity = levels.WARN })
+  local warnings = #vim.diagnostic.get(0, { severity = severity.WARN })
   if warnings > 0 then
-    diagnostic = diagnostic .. 'W' .. warnings
+    diagnostic = diagnostic ..' %#DiagnosticSignWarn#W' .. warnings
   end
-  return diagnostic
-end
-
-function _G.Hints()
-  local diagnostic = ''
-  local hints = #vim.diagnostic.get(0, { severity = levels.HINT })
+  local hints = #vim.diagnostic.get(0, { severity = severity.HINT })
   if hints > 0 then
-    diagnostic = diagnostic .. 'H' .. hints
+    diagnostic = diagnostic ..' %#DiagnosticSignHint#H' .. hints
+  end
+  local infos = #vim.diagnostic.get(0, { severity = severity.INFO })
+  if infos > 0 then
+    diagnostic = diagnostic ..' %#DiagnosticSignInfo#I' .. infos
   end
   return diagnostic
 end
 
+function _G.GitStatus()
+  local git_info = vim.b.gitsigns_status_dict
+  if not git_info or git_info.head == "" then
+    return ""
+  end
+  local added = git_info.added and ("%#GitSignsAdd#+" .. git_info.added .. " ") or ""
+  local changed = git_info.changed and ("%#GitSignsChange#~" .. git_info.changed .. " ") or ""
+  local removed = git_info.removed and ("%#GitSignsDelete#-" .. git_info.removed .. " ") or ""
+  if git_info.added == 0 then
+    added = ""
+  end
+  if git_info.changed == 0 then
+    changed = ""
+  end
+  if git_info.removed == 0 then
+    removed = ""
+  end
+  return table.concat {
+    " ",
+    added,
+    changed,
+    removed,
+    "%#Title# [  ",
+    git_info.head,
+    " ]",
+  }
+end
 
--- TODO: git status hl
--- function _G.GitStatus()
---   local new_status =""
---   local status = 
--- end
-
-local statusline = {
-  "  ",
-  "%m ",
+local statusline= {
+  " ",
+  "%#Title#%y ",
   "%f ",
-  "%#LineNr#%l:%v ",
-  "%#DiagnosticSignError#%{v:lua.Errors()} ",
-  "%#DiagnosticSignWarning#%{v:lua.Warnings()} ",
-  "%#DiagnosticSignHint#%{v:lua.Hints()} ",
+  "%m ",
+  "%*%l:%v ",
+  "%{%v:lua.Diagnostics()%}",
   "%*%=",
-  "%{get(b:,'gitsigns_status','')} ",
-  "%#LineNr# %{get(b:,'gitsigns_head','')} ",
-  "%*%y",
-  "  "
+  "%{%v:lua.GitStatus()%}",
+  " "
 }
 
 vim.opt.statusline = table.concat(statusline, '')

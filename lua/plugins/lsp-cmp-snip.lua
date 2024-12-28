@@ -24,9 +24,10 @@ return {
           { name = 'nvim_lsp' },
           { name = 'buffer' },
           { name = 'luasnip' },
+          { name = 'render-markdown' },
         }),
         mapping = cmp.mapping.preset.insert({
-          ['<C-Space>'] = cmp.mapping.complete(),
+          ['<C-Space>'] = cmp.mapping.confirm(),
           ['<C-u>'] = cmp.mapping.scroll_docs(-4),
           ['<C-d>'] = cmp.mapping.scroll_docs(4),
         }),
@@ -101,6 +102,11 @@ return {
                 })
                 require("nvim-lsp-ts-utils").setup_client(client)
               end,
+              settings = {
+                implementationsCodeLens = {
+                  enabled = false
+                }
+              }
             })
           end,
           html = function()

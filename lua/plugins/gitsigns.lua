@@ -22,5 +22,7 @@ return {
         border = "single"
       },
     })
+    vim.keymap.set("n", "<leader>gh","<cmd>Gitsigns preview_hunk<CR>")
+    vim.keymap.set("n", "<leader>grh","<cmd>Gitsigns reset_hunk<CR>")
   end
 }

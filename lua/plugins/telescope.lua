@@ -16,9 +16,9 @@ return {
         file_ignore_patterns = { "node_modules", "assets" },
         sorting_strategy = "ascending",
         borderchars = {
-          prompt = { "─", "│", "─", "│", "├", "┤", "┘", "└" },
+          prompt = { "─", "│", "─", "│", "├", "┤", "┤", "├" },
           results = { "─", "│", " ", "│", "┌", "┐", "│", "│" },
-          preview = { "─", "│", "─", "│", "┌", "┐", "┘", "└" },
+          preview = { " ", "│", "─", "│", "│", "│", "┘", "└" },
         },
       },
       extensions = {
@@ -27,13 +27,13 @@ return {
           grouped = true,
           hijack_netrw = true,
           initial_mode = "normal",
-        }
+        },
       }
     })
     require("telescope").load_extension("file_browser")
-    vim.keymap.set("n", "<leader>q", ":Telescope file_browser<CR>", {})
-    vim.keymap.set("n", "<leader>p", ":Telescope find_files<CR>", {})
-    vim.keymap.set("n", "<leader>l", ":Telescope live_grep<CR>", {})
-    vim.keymap.set("n", "<leader>ñ", ":Telescope current_buffer_fuzzy_find<CR>", {})
+    vim.keymap.set("n", "<leader>q", "<cmd>Telescope file_browser<CR>", {})
+    vim.keymap.set("n", "<leader>p", "<cmd>Telescope find_files<CR>", {})
+    vim.keymap.set("n", "<leader>l", "<cmd>Telescope live_grep<CR>", {})
+    vim.keymap.set("n", "<leader>ñ", "<cmd>Telescope current_buffer_fuzzy_find<CR>", {})
   end,
 }
