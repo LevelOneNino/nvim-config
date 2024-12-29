@@ -121,6 +121,27 @@ return {
                 }
               }
             })
+          end,
+          lua_ls = function()
+            require('lspconfig').lua_ls.setup({
+              root_dir = vim.fn.getcwd()
+            })
+          end,
+          pylsp = function()
+            require("lspconfig").pylsp.setup({
+              settings = {
+                pylsp = {
+                  plugins = {
+                    autopep8 = {
+                      enabled = false
+                    },
+                    yapf = {
+                      enabled = true,
+                    },
+                  }
+                }
+              }
+            })
           end
         }
       })

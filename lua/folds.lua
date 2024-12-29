@@ -3,25 +3,6 @@ vim.cmd("set foldlevel=99")
 vim.cmd("set foldmethod=expr")
 vim.cmd("set foldexpr=nvim_treesitter#foldexpr()")
 
-function Get_fold(lnum)
-  if vim.fn.foldclosed(lnum) ~= -1 then
-    return "%#DiagnosticSignError#" .. "◼"
-  end
-  return " "
-end
-
-_G.get_statuscol = function()
-  return "%s%{%v:relnum?'%=%{v:relnum}':'%#CursorLineNr#%-4{v:lnum}%='%} %*" .. Get_fold(vim.v.lnum) .. " "
-end
-
-vim.o.statuscolumn = "%!v:lua.get_statuscol()"
-
-vim.cmd([[
-augroup help_file
-autocmd! filetype help setlocal statuscolumn=
-augroup END
-]])
-
 vim.o.viewoptions = "folds,cursor"
 
 -- vim.cmd([[

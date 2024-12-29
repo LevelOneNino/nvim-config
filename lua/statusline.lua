@@ -61,3 +61,9 @@ local statusline= {
 }
 
 vim.opt.statusline = table.concat(statusline, '')
+
+vim.cmd([[
+augroup statuslineHide
+autocmd! filetype toggleterm setlocal statusline=%s
+augroup END
+]])
