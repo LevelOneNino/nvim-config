@@ -132,6 +132,9 @@ return {
               settings = {
                 pylsp = {
                   plugins = {
+                    pycodestyle = {
+                      ignore = { "E265" }
+                    },
                     autopep8 = {
                       enabled = false
                     },
