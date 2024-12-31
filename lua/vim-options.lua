@@ -1,4 +1,5 @@
 vim.cmd("set termguicolors")
+vim.cmd("set noswapfile")
 
 vim.cmd("set guicursor=n:blinkon1,i-ci-ve:ver1-blinkon1")
 vim.cmd("set cursorline")

@@ -37,6 +37,7 @@ hi! link lCursor Cursor
 hi! link debugPC CursorLine
 hi! link FloatBorder pmenu
 hi! link TelescopeBorder pmenu
+hi! link LazyGitBorder pmenu
 hi! link CccFloatBorder pmenu
 hi! link noiceCmdlinePopupBorder DiagnosticInfo
 hi! link NoiceCmdlinePopupBorderSearch DiagnosticWarn
@@ -50,6 +51,7 @@ hi Normal guifg=#d5d5ff guibg=#131720 gui=NONE cterm=NONE
 
 hi TelescopeNormal guifg=#d5d5ff guibg=#101319 gui=NONE cterm=NONE
 hi CccFloatNormal guifg=#d5d5ff guibg=#101319 gui=NONE cterm=NONE
+hi LazyGitFloat guifg=#d5d5ff guibg=#101319 gui=NONE cterm=NONE
 
 hi Added guifg=#10e020 guibg=#101319 gui=NONE cterm=NONE
 hi Changed guifg=#3545c5 guibg=#101319 gui=NONE cterm=NONE
@@ -167,3 +169,9 @@ hi SpellBad guifg=#d75f5f guibg=NONE guisp=#d75f5f gui=undercurl cterm=underline
 hi SpellCap guifg=#87afd7 guibg=NONE guisp=#87afd7 gui=undercurl cterm=underline
 hi SpellLocal guifg=#af87d7 guibg=NONE guisp=#af87d7 gui=undercurl cterm=underline
 hi SpellRare guifg=#5fafaf guibg=NONE guisp=#5fafaf gui=undercurl cterm=underline
+
+hi NotifyERRORBorder guifg=#101319
+hi NotifyWARNBorder guifg=#101319
+hi NotifyINFOBorder guifg=#101319
+hi NotifyDEBUGBorder guifg=#101319
+hi NotifyTRACEBorder guifg=#101319

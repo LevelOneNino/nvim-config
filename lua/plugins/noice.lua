@@ -3,11 +3,26 @@ return {
   event = "VeryLazy",
   dependencies = {
     "MunifTanjim/nui.nvim",
-    "hrsh7th/nvim-cmp"
+    "hrsh7th/nvim-cmp",
+    "rcarriga/nvim-notify"
   },
   config = function()
+    require("notify").setup({
+      render = "minimal",
+      stages = "fade",
+      timeout = "1000",
+      top_down = false,
+      on_open = function(win)
+        local config = vim.api.nvim_win_get_config(win)
+        config.border = "single"
+        vim.api.nvim_win_set_config(win, config)
+      end
+    })
     require("noice").setup({
       lsp = {
+        progress = {
+          view = "notify"
+        },
         override = {
           ["vim.lsp.util.convert_input_to_markdown_lines"] = true,
           ["vim.lsp.util.stylize_markdown"] = true,
