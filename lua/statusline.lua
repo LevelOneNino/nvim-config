@@ -42,7 +42,7 @@ function _G.GitStatus()
     added,
     changed,
     removed,
-    "%#Title# [  ",
+    "%* [  ",
     git_info.head,
     " ]",
   }
@@ -50,10 +50,10 @@ end
 
 local statusline= {
   " ",
-  "%#Title#%y ",
+  "%y ",
   "%f ",
   "%m ",
-  "%*%l:%v ",
+  "%#pmenu#%l:%v ",
   "%{%v:lua.Diagnostics()%}",
   "%*%=",
   "%{%v:lua.GitStatus()%}",

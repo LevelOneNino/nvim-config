@@ -35,23 +35,33 @@ hi! link Tag Special
 hi! link Typedef Type
 hi! link lCursor Cursor
 hi! link debugPC CursorLine
-hi! link FloatBorder pmenu
-hi! link TelescopeBorder pmenu
-hi! link LazyGitBorder pmenu
-hi! link CccFloatBorder pmenu
+
+hi! link TelescopeBorder  FloatBorder
+hi! link LazyGitBorder    FloatBorder
+hi! link CccFloatBorder   FloatBorder
+hi! link TelescopeNormal  FloatNormal
+hi! link LazyGitFloat     FloatNormal
+hi! link CccFloatNormal   FloatNormal
+
 hi! link noiceCmdlinePopupBorder DiagnosticInfo
 hi! link NoiceCmdlinePopupBorderSearch DiagnosticWarn
 hi! link NoiceCmdlineIconSearch DiagnosticWarn
 hi! link NoiceCmdlinePopupBorderHelp DiagnosticHint
 hi! link NoiceCmdlineIconHelp DiagnosticHint
+
 hi! link @tag.attribute.html Type
+
 hi! link RenderMarkdownBullet DiffChange
 
-hi Normal guifg=#d5d5ff guibg=#131720 gui=NONE cterm=NONE
+hi! link NotifyERRORBorder DiagnosticError
+hi! link NotifyWARNBorder DiagnosticWarn
+hi! link NotifyINFOBorder DiagnosticInfo 
+hi! link NotifyDEBUGBorder DiagnosticWarn 
+hi! link NotifyTRACEBorder DiagnosticHint
 
-hi TelescopeNormal guifg=#d5d5ff guibg=#101319 gui=NONE cterm=NONE
-hi CccFloatNormal guifg=#d5d5ff guibg=#101319 gui=NONE cterm=NONE
-hi LazyGitFloat guifg=#d5d5ff guibg=#101319 gui=NONE cterm=NONE
+hi Normal guifg=#bdbddb guibg=#131720 gui=NONE cterm=NONE
+hi FloatNormal guifg=#bdbddb guibg=#101319 gui=NONE cterm=NONE
+hi FloatBorder guifg=#404050 guibg=#101319 gui=NONE cterm=NONE
 
 hi Added guifg=#10e020 guibg=#101319 gui=NONE cterm=NONE
 hi Changed guifg=#3545c5 guibg=#101319 gui=NONE cterm=NONE
@@ -72,12 +82,12 @@ hi SignColumn guifg=NONE guibg=#101319 gui=NONE cterm=NONE
 hi DiffAdd guifg=#10e020 guibg=NONE gui=NONE cterm=NONE
 hi DiffChange guifg=#3545c5 guibg=NONE gui=NONE cterm=NONE
 hi DiffDelete guifg=#e02530 guibg=NONE gui=NONE cterm=NONE
-hi DiffText guifg=#454040 guibg=NONE gui=NONE cterm=NONE
+hi DiffText guifg=#404050 guibg=NONE gui=NONE cterm=NONE
 
 hi Directory guifg=NONE guibg=NONE gui=NONE cterm=NONE
 
 hi EndOfBuffer guifg=NONE guibg=NONE gui=NONE cterm=NONE
-hi FoldColumn guifg=#454040 guibg=#101319 gui=NONE cterm=NONE
+hi FoldColumn guifg=#404050 guibg=#101319 gui=NONE cterm=NONE
 hi Folded guifg=#e02530 guibg=NONE gui=NONE cterm=NONE
 
 hi IncSearch guifg=#101319 guibg=#f0b020 gui=NONE cterm=NONE
@@ -111,19 +121,19 @@ hi CurSearch guifg=#101319 guibg=#f0b020 gui=NONE cterm=NONE
 hi Search guifg=#101319 guibg=#e02530 gui=NONE cterm=NONE
 
 hi Title guifg=#f0b020 guibg=#101319 gui=NONE   cterm=NONE
-hi TabLine guifg=#454040 guibg=#101319 gui=NONE cterm=NONE
+hi TabLine guifg=#404050 guibg=#101319 gui=NONE cterm=NONE
 hi TabLineSel guifg=#9090a0 guibg=#22222f gui=NONE cterm=NONE
 hi TabLineFill guifg=NONE guibg=#101319 gui=NONE cterm=NONE
 
-hi StatusLineNC guifg=#454040 guibg=#101319 gui=NONE cterm=NONE
-hi StatusLine guifg=#9090a0 guibg=#101319 gui=NONE cterm=NONE
+hi StatusLineNC guifg=#404050 guibg=#101319 gui=NONE cterm=NONE
+hi StatusLine guifg=#f0b020 guibg=#101319 gui=NONE cterm=NONE
 
 hi VertSplit guifg=#22222f guibg=#22222f gui=NONE cterm=NONE
 
 hi Visual guifg=#e02530 guibg=#22222f gui=NONE cterm=reverse
 hi VisualNOS guifg=#e02530 guibg=#22222f gui=NONE cterm=reverse
 
-hi Comment guifg=#454040 guibg=NONE gui=NONE cterm=NONE
+hi Comment guifg=#404050 guibg=NONE gui=NONE cterm=NONE
 hi Constant guifg=#10e020 guibg=NONE gui=NONE cterm=NONE
 hi Identifier guifg=#9090a0 guibg=NONE gui=NONE cterm=NONE
 hi Special guifg=#e02530 guibg=NONE gui=NONE cterm=NONE
@@ -169,9 +179,3 @@ hi SpellBad guifg=#d75f5f guibg=NONE guisp=#d75f5f gui=undercurl cterm=underline
 hi SpellCap guifg=#87afd7 guibg=NONE guisp=#87afd7 gui=undercurl cterm=underline
 hi SpellLocal guifg=#af87d7 guibg=NONE guisp=#af87d7 gui=undercurl cterm=underline
 hi SpellRare guifg=#5fafaf guibg=NONE guisp=#5fafaf gui=undercurl cterm=underline
-
-hi NotifyERRORBorder guifg=#101319
-hi NotifyWARNBorder guifg=#101319
-hi NotifyINFOBorder guifg=#101319
-hi NotifyDEBUGBorder guifg=#101319
-hi NotifyTRACEBorder guifg=#101319
