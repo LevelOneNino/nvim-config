@@ -86,6 +86,12 @@ hi DiffChange guifg=#3545c5 guibg=NONE gui=NONE cterm=NONE
 hi DiffDelete guifg=#e02530 guibg=NONE gui=NONE cterm=NONE
 hi DiffText guifg=#404050 guibg=NONE gui=NONE cterm=NONE
 
+hi RenderMarkdownH1Bg guifg=#bdbddb guibg=NONE gui=NONE cterm=NONE
+hi RenderMarkdownH2Bg guifg=#10e020 guibg=NONE gui=NONE cterm=NONE
+hi RenderMarkdownH3Bg guifg=#e02530 guibg=NONE gui=NONE cterm=NONE
+hi RenderMarkdownH4Bg guifg=#3545c5 guibg=NONE gui=NONE cterm=NONE
+hi RenderMarkdownH5Bg guifg=#f0b020 guibg=NONE gui=NONE cterm=NONE
+
 hi Directory guifg=NONE guibg=NONE gui=NONE cterm=NONE
 
 hi EndOfBuffer guifg=NONE guibg=NONE gui=NONE cterm=NONE
