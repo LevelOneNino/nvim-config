@@ -13,7 +13,11 @@ vim.cmd("set tabstop=2")
 vim.cmd("set softtabstop=2")
 vim.cmd("set shiftwidth=2")
 vim.cmd("set colorcolumn=111,222,333,444,555")
-vim.cmd("set wrap nowrap")
+vim.cmd("set wrap")
+vim.cmd("set breakindent")
+vim.cmd("set breakindentopt=shift:2,sbr")
+vim.cmd("set showbreak=│")
+
 vim.opt.lbr = true
 
 vim.cmd("set signcolumn=yes")

@@ -51,6 +51,8 @@ hi! link NoiceCmdlineIconHelp DiagnosticHint
 
 hi! link @tag.attribute.html Type
 
+hi! link @type.builtin.python Statement
+
 hi! link RenderMarkdownBullet DiffChange
 
 hi! link NotifyERRORBorder DiagnosticError
@@ -97,7 +99,7 @@ hi MatchParen guifg=NONE guibg=NONE gui=reverse cterm=reverse
 
 hi ModeMsg guifg=#10e020 guibg=#101319 gui=NONE cterm=NONE
 hi MoreMsg guifg=#10e020 guibg=#101319 gui=NONE cterm=NONE
-hi NonText guifg=#606070 guibg=NONE gui=NONE cterm=NONE
+hi NonText guifg=#22222f guibg=NONE gui=NONE cterm=NONE
  
 hi MsgArea guifg=#10e020 guibg=#101319 gui=NONE cterm=NONE
 

@@ -133,7 +133,8 @@ return {
                 pylsp = {
                   plugins = {
                     pycodestyle = {
-                      ignore = { "E265" }
+                      ignore = { "E265" },
+                      maxLineLength = 111
                     },
                     autopep8 = {
                       enabled = false
