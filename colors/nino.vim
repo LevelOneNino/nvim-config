@@ -1,4 +1,3 @@
-set background=dark
 source $VIMRUNTIME/colors/vim.lua 
 let g:colors_name = 'nino'
 
@@ -101,7 +100,7 @@ hi Folded guifg=#e02530 guibg=NONE gui=NONE cterm=NONE
 hi IncSearch guifg=#101319 guibg=#f0b020 gui=NONE cterm=NONE
 hi Substitute guifg=#101319 guibg=#e02530 gui=NONE cterm=NONE
 
-hi MatchParen guifg=NONE guibg=NONE gui=reverse cterm=reverse
+hi MatchParen guifg=#101319 guibg=#bdbddb gui=NONE cterm=NONE
 
 hi ModeMsg guifg=#10e020 guibg=#101319 gui=NONE cterm=NONE
 hi MoreMsg guifg=#10e020 guibg=#101319 gui=NONE cterm=NONE
@@ -187,3 +186,4 @@ hi SpellBad guifg=#d75f5f guibg=NONE guisp=#d75f5f gui=undercurl cterm=underline
 hi SpellCap guifg=#87afd7 guibg=NONE guisp=#87afd7 gui=undercurl cterm=underline
 hi SpellLocal guifg=#af87d7 guibg=NONE guisp=#af87d7 gui=undercurl cterm=underline
 hi SpellRare guifg=#5fafaf guibg=NONE guisp=#5fafaf gui=undercurl cterm=underline
+
