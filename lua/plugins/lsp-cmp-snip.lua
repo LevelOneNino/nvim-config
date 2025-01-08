@@ -89,7 +89,7 @@ return {
       require('mason-lspconfig').setup({
         ensure_installed = {
           "ts_ls",
-          "pyslp",
+          "pylsp",
           "lua_ls",
           "emmet_language_server",
           "cssls",
