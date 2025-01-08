@@ -52,7 +52,7 @@ hi! link @tag.attribute.html Type
 
 hi! link @type.builtin.python Statement
 
-hi! link RenderMarkdownBullet DiffChange
+hi! link RenderMarkdownBullet DiffText
 
 hi! link NotifyERRORBorder DiagnosticError
 hi! link NotifyWARNBorder DiagnosticWarn
