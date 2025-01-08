@@ -89,6 +89,10 @@ return {
       require('mason-lspconfig').setup({
         ensure_installed = {
           "ts_ls",
+          "pyslp",
+          "lua_ls",
+          "emmet_language_server",
+          "cssls",
         },
         handlers = {
           function(server_name)
