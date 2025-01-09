@@ -93,6 +93,7 @@ return {
           "lua_ls",
           "emmet_language_server",
           "cssls",
+          "html",
         },
         handlers = {
           function(server_name)
@@ -118,7 +119,6 @@ return {
               settings = {
                 html = {
                   format = {
-                    wrapAttributes = "force-aligned",
                     indentInnerHtml = true,
                     maxPreserveNewLines = true,
                   }

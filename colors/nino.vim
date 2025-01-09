@@ -144,7 +144,7 @@ hi Comment guifg=#404050 guibg=NONE gui=NONE cterm=NONE
 hi Constant guifg=#10e020 guibg=NONE gui=NONE cterm=NONE
 hi Identifier guifg=#9090a0 guibg=NONE gui=NONE cterm=NONE
 hi Special guifg=#e02530 guibg=NONE gui=NONE cterm=NONE
-hi PreProc guifg=#3545c5 guibg=NONE gui=NONE cterm=NONE
+hi PreProc guifg=#e02530 guibg=NONE gui=NONE cterm=NONE
 hi Statement guifg=#10e020 guibg=NONE gui=NONE cterm=NONE
 hi String guifg=#f0b020 guibg=NONE gui=NONE cterm=NONE
 hi Type guifg=#556060 guibg=NONE gui=NONE cterm=NONE

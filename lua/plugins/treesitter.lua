@@ -11,12 +11,14 @@ return {
         enable = true,
         disable = {
           "pug",
+          "html",
         },
       },
       indent = {
         enable = true,
         disable = {
           "pug",
+          "html",
         },
       },
     })
