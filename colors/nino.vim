@@ -60,7 +60,7 @@ hi! link NotifyINFOBorder DiagnosticInfo
 hi! link NotifyDEBUGBorder DiagnosticWarn 
 hi! link NotifyTRACEBorder DiagnosticHint
 
-hi Normal guifg=#bdbddb guibg=#131720 gui=NONE cterm=NONE
+hi Normal guifg=#bdbddb guibg=#191a22 gui=NONE cterm=NONE
 hi FloatNormal guifg=#bdbddb guibg=#101319 gui=NONE cterm=NONE
 hi FloatBorder guifg=#404050 guibg=#101319 gui=NONE cterm=NONE
 
