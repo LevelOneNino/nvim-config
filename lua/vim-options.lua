@@ -30,4 +30,7 @@ vim.cmd("set scrolloff=999")
 vim.keymap.set('n', 'j', "gj", { noremap = true })
 vim.keymap.set('n', 'k', "gk", { noremap = true })
 
+vim.keymap.set('n', '<C-d>', "5gj", { noremap = true })
+vim.keymap.set('n', '<C-u>', "5gk", { noremap = true })
+
 vim.cmd("colorscheme nino")

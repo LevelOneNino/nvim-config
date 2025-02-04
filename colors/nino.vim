@@ -104,7 +104,7 @@ hi MatchParen guifg=#101319 guibg=#bdbddb gui=NONE cterm=NONE
 
 hi ModeMsg guifg=#10e020 guibg=#101319 gui=NONE cterm=NONE
 hi MoreMsg guifg=#10e020 guibg=#101319 gui=NONE cterm=NONE
-hi NonText guifg=#22222f guibg=NONE gui=NONE cterm=NONE
+hi NonText guifg=#e02530 guibg=NONE gui=NONE cterm=NONE
  
 hi MsgArea guifg=#10e020 guibg=#101319 gui=NONE cterm=NONE
 

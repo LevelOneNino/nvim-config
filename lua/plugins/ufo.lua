@@ -35,5 +35,11 @@ return {
       open_fold_hl_timeout = 0,
       fold_virt_text_handler = handler
     })
+  end,
+  init = function()
+    vim.keymap.set('n', 'zm', '<cmd>lua require("ufo").closeFoldsWith(0)<CR>',{noremap = true})
+    vim.keymap.set('n', 'zr', '<cmd>lua require("ufo").openAllFolds()<CR>',{noremap = true})
+    vim.keymap.set('n', 'zM', '<cmd>lua require("ufo").closeFoldsWith(0)<CR>',{noremap = true})
+    vim.keymap.set('n', 'zR', '<cmd>lua require("ufo").openAllFolds()<CR>',{noremap = true})
   end
 }

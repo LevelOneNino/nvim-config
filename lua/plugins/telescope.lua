@@ -8,6 +8,14 @@ return {
   config = function()
     require("telescope").setup({
       defaults = {
+        preview = {
+          treesitter = {
+            disable = {
+              'pug',
+              'html'
+            }
+          }
+        },
         layout_strategy = 'vertical',
         layout_config = {
           mirror = true,
@@ -35,5 +43,6 @@ return {
     vim.keymap.set("n", "<leader>p", "<cmd>Telescope find_files<CR>", {})
     vim.keymap.set("n", "<leader>l", "<cmd>Telescope live_grep<CR>", {})
     vim.keymap.set("n", "<leader>ñ", "<cmd>Telescope current_buffer_fuzzy_find<CR>", {})
+    vim.keymap.set("n", "<leader>b", "<cmd>Telescope buffers initial_mode=normal<CR>", {})
   end,
 }

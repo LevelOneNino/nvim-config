@@ -102,6 +102,7 @@ return {
           ts_ls = function()
             require('lspconfig').ts_ls.setup({
               on_attach = function(client, bufnr)
+                client.server_capabilities.semanticTokensProvider = nil
                 require("nvim-lsp-ts-utils").setup({
                   filter_out_diagnostics_by_code = { 80001 },
                 })
